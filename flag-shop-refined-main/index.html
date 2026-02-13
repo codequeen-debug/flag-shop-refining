@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Favorite Flag Shop</title>
+    <link rel="icon" href="assets/SWE. 2026.png" type="image/x-icon" />
+
+    <script
+      src="https://kit.fontawesome.com/ae43ee1d0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="article-content">
+    <section class="navbar">
+      <img class="logo" src="assets/SWE. 2026.png" alt="Flag Shop" />
+      <h1 class="primary-font">Premium Flags</h1>
+      <nav class="primary-font">
+        <ul class="horizontal-menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Shop</a></li>
+          <li><a href="">About Us</a></li>
+          <li>
+            <button type="button" class="cart-link cart-trigger" id="cart-trigger" aria-label="View cart">
+              <i class="fa-solid fa-cart-shopping"></i> Cart
+              <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="cart-overlay" id="cart-overlay" aria-hidden="true"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <h2 class="primary-font cart-drawer-title">Your Cart</h2>
+        <button type="button" class="cart-drawer-close" id="cart-close" aria-label="Close cart">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="cart-drawer-body">
+        <div id="cart-items" class="cart-items"></div>
+        <p id="cart-empty" class="cart-empty secondary-font">Your cart is empty.</p>
+        <div class="cart-drawer-footer">
+          <p class="cart-total secondary-font">Total: <strong id="cart-total">$0.00</strong></p>
+          <button type="button" class="cart-checkout" id="cart-checkout">Proceed to checkout</button>
+        </div>
+      </div>
+    </aside>
+    <section class="banner">
+      <div class="hero">
+        <h1 class="primary-font banner-title">
+          <span class="banner-line-1">From New College</span>
+          <span class="special-color"><br />to your home</span>
+        </h1>
+        <p class="secondary-font bottom-text">
+          <b>Quality You Can Rally Behind.</b> We don’t just sell fabric; we provide
+          <strong>symbols</strong> of identity, heritage, and pride. 
+          From high-durability outdoor ensigns to premium indoor flags, 
+          our flags are crafted to withstand the elements and the demands of daily use.
+          Our collection is curated for those who demand precision in every stitch. 
+          Find your colors and fly them high.
+        </p>
+      </div>
+      <div>
+        <img class="banner-image" src="assets/SWE. 2026.png" alt="" />
+      </div>
+    </section>
+    <section class="flags" id="our-flags">
+      <h2 class="primary-font">
+        <span class="special-color">Our </span>Flags
+      </h2>
+      <p
+        class="secondary-font"
+        style="font-size: large; padding: 10px; width: 60%"
+      >
+        Add a splash of color to your space with our vibrant flags! Whether you're looking
+        to showcase your national pride, celebrate a special event, or simply brighten up your decor,
+        our diverse collection has something for everyone.
+      </p>
+      <div class="cards">
+        <div class="flag-card">
+          <img src="assets/JAMAICAN-FLAG.jpg" alt="Flag of Jamaica" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF JAMAICA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Jamaica" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Jamaica" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/CANADAIN-FLAG.jpg" alt="Flag of Canada" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF CANADA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Canada" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Canada" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/JAPAN-FLAG.png" alt="Flag of Japan" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF JAPAN
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Japan" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Japan" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/GHANA_FLAG.png" alt="Flag of Ghana" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF GHANA
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Ghana" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Ghana" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/norway-flag.png" alt="Flag of Norway" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF NORWAY
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Norway" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Norway" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/BRAZIL-FLAG.jpg" alt="Flag of Brazil" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF BRAZIL
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Brazil" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Brazil" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/BRITISH-FLAG.png" alt="Flag of United Kingdom" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF UNITED KINGDOM
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of United Kingdom" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of United Kingdom" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/barbados.png" alt="Flag of Barbados" />
+          <h3 class="primary-font" style="font-size: 1.1rem">
+            FLAG OF BARBADOS
+          </h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of Barbados" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of Barbados" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+        <div class="flag-card">
+          <img src="assets/IndianFLAG.jpg" alt="Flag of India" />
+          <h3 class="primary-font" style="font-size: 1.1rem">FLAG OF INDIA</h3>
+          <h4 class="primary-font" style="font-size: 1rem">Price: $20.99</h4>
+          <div class="flag-card-actions">
+            <button type="button" class="buy-now" data-flag-name="Flag of India" data-price="20.99">Buy now</button>
+            <button type="button" class="add-to-cart" data-flag-name="Flag of India" data-price="20.99">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="news-letter-container">
+      <h1 class="primary-font">
+        <span class="special-color">Premium Flag Crew </span>
+      </h1>
+      <div
+        style="display: flex; gap: 5px; align-items: center"
+        class="email-div secondary-font"
+      >
+        <input
+          type="email"
+          id="newsletter-email"
+          style="width: 300px; height: 40px"
+          placeholder="Enter your email"
+          aria-label="Email for newsletter"
+        />
+        <button type="button" id="newsletter-submit">Subscribe</button>
+        <span id="newsletter-message" class="newsletter-message" aria-live="polite"></span>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-logo">
+        <img src="assets/SWE. 2026.png" alt="Flag Shop logo" />
+      </div>
+
+      <ul class="footer-menu secondary-font">
+        <li><a href="">Home</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Features</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Terms of Service</a></li>
+      </ul>
+
+      <div class="footer-social-links">
+        <a id="twitter-btn"
+        class="social-btn"
+         href="https://twitter.com/"
+          target="_blank"
+           rel="noopener"
+            aria-label="Twitter">
+             <img src="assets/icon-twitter.png" alt="Twitter" />
+            </a>
+
+         <a id="linkedin-btn"
+         class="social-btn"
+         href="https://www.linkedin.com/"
+          target="_blank"
+           rel="noopener"
+            aria-label="LinkedIn">
+            <img src="assets/icon-linkedin.png" alt="LinkedIn" />
+            </a>
+
+           <a id="youtube-btn"
+            class="social-btn"
+            href="https://www.youtube.com/"
+            target="_blank"
+               rel="noopener"
+               aria-label="YouTube">
+               <img src="assets/icon-youtube.png" alt="YouTube" />
+              </a>
+
+            <a id="facebook-btn"
+             class="social-btn"
+              href="https://www.facebook.com/"
+               target="_blank"
+               rel="noopener"
+               aria-label="Facebook">
+                <img src="assets/icon-facebook.png" alt="Facebook" />
+              </a>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var CART_KEY = "flag-shop-cart";
+        var countEl = document.getElementById("cart-count");
+        var overlay = document.getElementById("cart-overlay");
+        var drawer = document.getElementById("cart-drawer");
+        var cartItemsEl = document.getElementById("cart-items");
+        var cartEmptyEl = document.getElementById("cart-empty");
+        var cartTotalEl = document.getElementById("cart-total");
+
+        function getCart() {
+          try {
+            var raw = localStorage.getItem(CART_KEY);
+            return raw ? JSON.parse(raw) : [];
+          } catch (e) {
+            return [];
+          }
+        }
+
+        function saveCart(items) {
+          localStorage.setItem(CART_KEY, JSON.stringify(items));
+          updateCount();
+          renderCart();
+        }
+
+        function updateCount() {
+          var items = getCart();
+          var total = items.reduce(function (sum, item) {
+            return sum + (item.qty || 1);
+          }, 0);
+          if (countEl) {
+            countEl.textContent = total;
+            countEl.classList.toggle("cart-count--visible", total > 0);
+          }
+        }
+
+        function addToCart(name, price) {
+          var items = getCart();
+          var found = items.find(function (item) {
+            return item.name === name;
+          });
+          if (found) {
+            found.qty = (found.qty || 1) + 1;
+          } else {
+            items.push({ name: name, price: parseFloat(price) || 0, qty: 1 });
+          }
+          saveCart(items);
+        }
+
+        function removeFromCart(index) {
+          var items = getCart();
+          items.splice(index, 1);
+          saveCart(items);
+        }
+
+        function openCart() {
+          if (overlay) overlay.classList.add("is-open");
+          if (drawer) {
+            drawer.classList.add("is-open");
+            drawer.setAttribute("aria-hidden", "false");
+          }
+          if (overlay) overlay.setAttribute("aria-hidden", "false");
+          renderCart();
+        }
+
+        function closeCart() {
+          if (overlay) overlay.classList.remove("is-open");
+          if (drawer) {
+            drawer.classList.remove("is-open");
+            drawer.setAttribute("aria-hidden", "true");
+          }
+          if (overlay) overlay.setAttribute("aria-hidden", "true");
+        }
+
+        function renderCart() {
+          var items = getCart();
+          if (!cartItemsEl) return;
+          cartItemsEl.innerHTML = "";
+          items.forEach(function (item, index) {
+            var qty = item.qty || 1;
+            var subtotal = (item.price * qty).toFixed(2);
+            var row = document.createElement("div");
+            row.className = "cart-item";
+            row.innerHTML =
+              '<div class="cart-item-info">' +
+              '<span class="cart-item-name">' + escapeHtml(item.name) + "</span>" +
+              '<div class="cart-item-details">' + qty + " × $" + Number(item.price).toFixed(2) + " = $" + subtotal + "</div>" +
+              "</div>" +
+              '<button type="button" class="cart-item-remove" data-cart-index="' + index + '" aria-label="Remove from cart">Remove</button>';
+            cartItemsEl.appendChild(row);
+          });
+          cartItemsEl.querySelectorAll(".cart-item-remove").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var idx = parseInt(this.getAttribute("data-cart-index"), 10);
+              if (!isNaN(idx)) removeFromCart(idx);
+            });
+          });
+          var totalQty = items.reduce(function (s, item) { return s + (item.qty || 1); }, 0);
+          var totalSum = items.reduce(function (s, item) {
+            return s + (item.price || 0) * (item.qty || 1);
+          }, 0);
+          if (cartEmptyEl) cartEmptyEl.style.display = totalQty === 0 ? "block" : "none";
+          if (cartTotalEl) cartTotalEl.textContent = "$" + totalSum.toFixed(2);
+          var footer = drawer && drawer.querySelector(".cart-drawer-footer");
+          if (footer) footer.style.display = totalQty === 0 ? "none" : "block";
+        }
+
+        function escapeHtml(text) {
+          var div = document.createElement("div");
+          div.textContent = text;
+          return div.innerHTML;
+        }
+
+        document.querySelectorAll(".add-to-cart").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var name = this.getAttribute("data-flag-name") || "Flag";
+            var price = this.getAttribute("data-price") || "0";
+            addToCart(name, price);
+            this.textContent = "Added!";
+            var self = this;
+            setTimeout(function () {
+              self.textContent = "Add to Cart";
+            }, 1500);
+          });
+        });
+
+        document.querySelectorAll(".buy-now").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var name = this.getAttribute("data-flag-name") || "Flag";
+            var price = this.getAttribute("data-price") || "0";
+            addToCart(name, price);
+            openCart();
+          });
+        });
+
+        var cartTrigger = document.getElementById("cart-trigger");
+        if (cartTrigger) cartTrigger.addEventListener("click", openCart);
+        if (overlay) overlay.addEventListener("click", closeCart);
+        var cartClose = document.getElementById("cart-close");
+        if (cartClose) cartClose.addEventListener("click", closeCart);
+
+        var checkoutBtn = document.getElementById("cart-checkout");
+        if (checkoutBtn) checkoutBtn.addEventListener("click", function () {
+          closeCart();
+          alert("Checkout is not implemented yet. Your cart has been saved.");
+        });
+
+        updateCount();
+        renderCart();
+      })();
+
+      (function () {
+        var btn = document.getElementById("newsletter-submit");
+        var input = document.getElementById("newsletter-email");
+        var msg = document.getElementById("newsletter-message");
+        if (btn && input && msg) {
+          btn.addEventListener("click", function () {
+            var email = (input.value || "").trim();
+            if (!email) {
+              msg.textContent = "Please enter your email.";
+              msg.className = "newsletter-message newsletter-message--error";
+              console.log("Newsletter: Subscribe clicked but no email entered.");
+              return;
+            }
+            msg.textContent = "Thanks for subscribing!";
+            msg.className = "newsletter-message newsletter-message--success";
+            input.value = "";
+            console.log("Newsletter: Subscribed with email: " + email);
+             })();
+             }
+      })();
+    </script>
+  </body>
+</html>
